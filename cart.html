@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korpa</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html"><img src="bojana logo.png" alt="Logo" class="logo-img"></a>
+    </div>
+    <nav class="header-links">
+        <a href="/home">Početna</a>
+        <a href="/contact">Kontakt</a>
+        <a href="product.html" class="exit-button">Izlaz</a> <!-- Dugme za izlaz -->
+    </nav>
+</div>
+    <h1>Vaša Korpa</h1>
+</header>
+
+<main>
+    <!-- Prikaz poručenih proizvoda -->
+    <section class="cart-products">
+        <h2>Poručeni Proizvodi</h2>
+        <div id="product-list">
+            <div class="cart-item">
+                <img src="soping.jpg" alt="Naziv Proizvoda" class="product-image">
+                <span class="product-name">Naziv Proizvoda</span>
+                <span class="product-price">Cena: 1000 RSD</span>
+                <button class="remove-button">Ukloni</button>
+            </div>
+            <div class="cart-item">
+                <img src="soping.jpg" alt="Naziv Proizvoda" class="product-image">
+                <span class="product-name">Naziv Proizvoda</span>
+                <span class="product-price">Cena: 1000 RSD</span>
+                <button class="remove-button">Ukloni</button>
+            </div>
+    </section>
+
+    <!-- Forma za podatke o kupcu -->
+    <section class="customer-info">
+        <h2>Podaci za Naplatu</h2>
+        <form id="customer-form">
+            <h3>Podaci za Fizička Lica</h3>
+            <label for="name">Ime i Prezime:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="address">Adresa:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="postal-code">Poštanski Broj:</label>
+            <input type="text" id="postal-code" name="postal-code" required>
+
+            <label for="phone">Telefon:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <h3>Podaci za Pravna Lica</h3>
+            <label for="company-name">Naziv Kompanije:</label>
+            <input type="text" id="company-name" name="company-name">
+
+            <label for="pib">PIB:</label>
+            <input type="text" id="pib" name="pib">
+
+            <label for="company-address">Adresa Kompanije:</label>
+            <input type="text" id="company-address" name="company-address">
+
+            <label for="company-postal-code">Poštanski Broj:</label>
+            <input type="text" id="company-postal-code" name="company-postal-code">
+
+            <label for="company-email">E-mail Kompanije:</label>
+            <input type="email" id="company-email" name="company-email">
+
+            <button type="submit">Pošalji Narudžbinu</button>
+        </form>
+    </section>
+</main>
+<!-- Popup prozor za obaveštenje -->
+<div id="notification-popup" class="popup">
+    <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <h2>Uspesno ste narucili!</h2>
+        <p>Vaša narudžbina je uspešno zabeležena. Hvala na kupovini!</p>
+        <h3>Racun:</h3>
+        <div id="receipt"></div>
+    </div>
+</div>
+<footer>
+    <div class="footer-content">
+        <div class="working-hours">
+            <h3>Radno vreme</h3>
+            <p>Ponedeljak - Petak: 07:00 - 20:00</p>
+            <p>Subota: 07:00 - 17:00</p>
+            <p>Nedelja: 08:00 - 13:00</p>
+        </div>
+        <div class="contact-info">
+            <h3>Kontakt</h3>
+            <p>Telefon: +381 21 123 456</p>
+            <p>Email: info@robna-kuca-bojana.rs</p>
+        </div>
+        <div class="footer-socials">
+            <h3>ROBNA KUĆA BOJANA DOO SREMSKA KAMENICA</h3>
+            <a><b>PIB</b>:112056890</a>
+            <br>
+            <a><b>MB</b>:21598887</a>
+            <a></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Robna Kuća Bojana. Sva prava zadržana.</p>
+    </div>
+</footer>
+<script src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: red; /* Pozadinska boja hedera */
+    padding: 10px 20px; /* Unutrašnji razmak */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sjena za heder */
+}
+
+.header-container {
+    display: flex; /* Koristi flexbox za raspored */
+    justify-content: space-between; /* Prostor između elemenata */
+    align-items: center; /* Vertikalno centriranje */
+    flex-wrap: wrap; /* Omogućava prelamanje na manjim ekranima */
+}
+
+.logo img {
+    max-height: 70px; /* Maksimalna visina logotipa */
+}
+
+/* Promenjeno da pretraživač bude manji i centriran */
+.search-bar {
+    display: flex; /* Koristi flexbox za pretragu */
+    justify-content: center; /* Centriranje pretraživača */
+    width: 100%; /* Koristi celu širinu */
+    margin: 10px 0; /* Razmak od drugih elemenata */
+}
+
+.search-bar input {
+    width: 200px; /* Fiksna širina pretraživača */
+    padding: 10px; /* Unutrašnji razmak */
+    border: 1px solid #ccc; /* Granica */
+    border-radius: 4px; /* Zaobljeni uglovi */
+}
+
+.search-bar button {
+    padding: 10px 15px; /* Unutrašnji razmak dugmeta */
+    background-color: #591b19; /* Boja dugmeta */
+    color: white; /* Boja teksta */
+    border: none; /* Bez granica */
+    border-radius: 4px; /* Zaobljeni uglovi */
+    cursor: pointer; /* Kursor na dugmetu */
+}
+
+/* Linkovi s desne strane */
+.header-links {
+    display: flex; /* Koristi flexbox za linkove */
+    gap: 20px; /* Razmak između linkova */
+}
+
+.header-links a {
+    text-decoration: none; /* Bez podvlačenja */
+    color: white; /* Boja teksta */
+}
+/* Responsive stilovi */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Prelaz na kolonu na manjim ekranima */
+        align-items: flex-start; /* Poravnanje ulijevo */
+    }
+
+    .search-bar {
+        width: 100%; /* Pretraživač koristi celu širinu */
+        margin: 10px 0; /* Razmak od drugih elemenata */
+    }
+
+    .header-links {
+        flex-wrap: wrap; /* Omogućava prelamanje linkova */
+        justify-content: center; /* Centriranje linkova */
+    }
+}
+
+.mega-menu {
+    background-color: #fff;
+    padding: 10px 0;
+}
+
+.mega-menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.mega-menu li {
+    margin: 0 15px;
+}
+
+.mega-menu a {
+    text-decoration: none;
+    color: #d52b1e; /* Crvena boja */
+}
+
+.product-card {
+    width: 250px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.dimension-select, .order-button {
+    margin-top: 10px;
+    padding: 8px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.order-button {
+    background-color: #f00;
+    color: white;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+}
+
+.order-button:hover {
+    background-color: #c00;
+}
+
+/* Stilovi za pop-up */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    width: 80%;
+    text-align: center;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+footer {
+    background-color: #c9c8c8;
+    color: #fff;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content div {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-content h3 {
+    color: red;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-content p, .footer-content a {
+    font-size: 14px;
+    color: rgb(37, 23, 23);
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.footer-content a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #222;
+    font-size: 13px;
+    color: #aaa;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+@media (max-width: 600px) {
+  h2 {
+      font-size: 1.5rem; /* Smaller font size on small screens */
+  }
+
+  .button {
+      padding: 8px 16px; /* Smaller padding on small screens */
+      font-size: 1rem; /* Smaller font size for buttons */
+  }
+}
+
+/* Responsive stilovi */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Prelaz na kolonu na manjim ekranima */
+        align-items: flex-start; /* Poravnanje ulijevo */
+    }
+
+    .search-bar {
+        justify-content: center; /* Centriranje pretraživača */
+        margin: 10px 0; /* Razmak od drugih elemenata */
+    }
+
+    .header-links {
+        flex-wrap: wrap; /* Omogućava prelamanje linkova */
+        justify-content: center; /* Centriranje linkova */
+    }
+}

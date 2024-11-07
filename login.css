@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8; /* Svetla pozadina */
+    color: #333; /* Tamna boja teksta */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Puni visinu ekrana */
+    margin: 0;
+}
+
+.login-container {
+    background-color: white; /* Bela pozadina za formu */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Širina forme */
+    animation: ambientGlow 1.5s infinite alternate; /* Dodaj animaciju */
+}
+h1 {
+    text-align: center;
+    color: red; /* Crvena boja za naslov */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333; /* Tamna boja za labelu */
+}
+
+input {
+    width: 90%; /* Širina input polja */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input:focus {
+    border-color: red; /* Crvena boja kada se fokusuju input polja */
+    outline: none; /* Ukloni defaultni outline */
+}
+
+.btn {
+    background-color: red; /* Crvena boja dugmeta */
+    color: white; /* Bela boja teksta dugmeta */
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Širina dugmeta */
+    font-size: 16px; /* Veličina fonta dugmeta */
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: darkred; /* Tamnija crvena boja pri hoveru */
+}
+
+@keyframes ambientGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 10px rgba(255, 0, 0, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 40px rgba(255, 0, 0, 0.7), 0 0 30px rgba(255, 0, 0, 0.5);
+    }
+}

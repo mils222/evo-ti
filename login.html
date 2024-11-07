@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prijava - Admin Panel</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Prijava</h1>
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <label for="username">Korisničko ime:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Lozinka:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn">Prijavi se</button>
+        </form>
+    </div>
+</body>
+<script>
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Sprečava podrazumevano ponašanje forme
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    fetch('/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Ako je login uspešan, preusmeravanje na admin panel
+            window.location.href = '/admin';
+        } else {
+            // Prikazivanje greške
+            alert(data.error);
+        }
+    })
+    .catch(error => console.error('Error:', error));
+});
+</script>
+</html>

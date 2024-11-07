@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proizvodi</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <!-- Logo sa leve strane -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="bojana logo.png" alt="Department Store Logo" class="logo-img">
+                </a>
+            </div>
+    
+            <!-- Search bar u sredini -->
+            <div class="search-bar">
+                <input type="text" id="search-bar" placeholder="Pretraži proizvod" />
+                <button id="search-button">Pretraži</button>
+            </div>
+    
+            <!-- Linkovi s desne strane -->
+            <nav class="header-links">
+                <a href="/home">Početna</a>
+                <a href="/contact">Kontakt</a>
+                <a href="cart.html">Korpa</a>
+            </nav>
+        </div>
+    </header>
+    <nav class="mega-menu">
+        <ul id="category-menu"></ul>
+    </nav>
+    <main>
+        <div id="product-container" class="product-container">
+          
+        </div>
+    </main>
+    <script src="product.js"></script>
+   <!-- Pop-up prozor sa informacijama o proizvodu -->
+<div id="product-popup" class="popup" style="display:none;">
+    <div class="popup-content">
+        <span id="close-popup" class="close-popup">&times;</span>
+        <h2 id="popup-title"></h2>
+        <img id="popup-image" src="" alt="Proizvod" />
+        <p id="popup-description"></p>
+        <p id="popup-price"></p>
+        <p id="popup-dimensions"></p>
+    </div>
+</div>
+    <footer>
+        <div class="footer-content">
+            <div class="working-hours">
+                <h3>Radno vreme</h3>
+                <p>Ponedeljak - Petak: 07:00 - 20:00</p>
+                <p>Subota: 07:00 - 17:00</p>
+                <p>Nedelja: 08:00 - 13:00</p>
+            </div>
+            <div class="contact-info">
+                <h3>Kontakt</h3>
+                <p>Telefon: +381 21 123 456</p>
+                <p>Email: info@robna-kuca-bojana.rs</p>
+            </div>
+            <div class="footer-socials">
+                <h3>ROBNA KUĆA BOJANA DOO SREMSKA KAMENICA</h3>
+                <a><b>PIB</b>:112056890</a>
+                <br>
+                <a><b>MB</b>:21598887</a>
+                <a></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Robna Kuća Bojana. Sva prava zadržana.</p>
+        </div>
+    </footer>
+</body>
+</html>

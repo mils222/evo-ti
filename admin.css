@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: red; /* Crvena pozadina */
+}
+
+.logo-img {
+    height: 50px; /* Visina loga */
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-bar button {
+    padding: 10px;
+    border: none;
+    background-color: rgb(48, 9, 9);
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #ff4d4d;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"],
+button[type="button"] {
+    padding: 10px 15px;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="button"] {
+    background-color: red;
+    margin-top: 5px;
+}
+/* Stilizovanje popup prozora */
+.popup {
+    display: none; /* Sakriveno po defaultu */
+    position: fixed; /* Pozicioniranje u odnosu na prozor */
+    z-index: 1000; /* Iznad ostalih elemenata */
+    left: 0;
+    top: 0;
+    width: 100%; /* Pokriva ceo ekran */
+    height: 100%; /* Pokriva ceo ekran */
+    background-color: rgba(0, 0, 0, 0.5); /* Polu-providna pozadina */
+    overflow: auto; /* Omogućava skrolovanje */
+}
+
+/* Stilizacija sadržaja popup-a */
+.popup-content {
+    background-color: #fff; /* Bele pozadine */
+    margin: 15% auto; /* Margine sa gornje strane i centriranje */
+    padding: 20px; /* Unutrašnje margine */
+    border: 1px solid #888; /* Igra sa ivicama */
+    width: 300px; /* Širina popup-a */
+    border-radius: 8px; /* Zaobljeni uglovi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ambijentalno osvetljenje */
+}
+
+/* Stilizacija dugmeta za zatvaranje */
+.close {
+    color: #aaa; /* Boja teksta */
+    float: right; /* Desno poravnavanje */
+    font-size: 28px; /* Veličina fonta */
+    font-weight: bold; /* Podebljano */
+}
+
+/* Efekat promene boje na hover */
+.close:hover,
+.close:focus {
+    color: black; /* Crna boja na hover */
+    text-decoration: none; /* Bez podvlačenja */
+    cursor: pointer; /* Ruka kao pokazivač */
+}
+
+/* Stilizovanje forme unutar popup-a */
+#edit-product-form {
+    display: flex;
+    flex-direction: column; /* Stavljamo elemente u kolonu */
+}
+
+#edit-product-form label {
+    margin-bottom: 5px; /* Razmak između labela i inputa */
+}
+
+#edit-product-form input,
+#edit-product-form textarea {
+    margin-bottom: 15px; /* Razmak između inputa */
+    padding: 10px; /* Unutrašnje margine */
+    border: 1px solid #ccc; /* Boja ivice */
+    border-radius: 4px; /* Zaobljeni uglovi */
+}
+
+/* Stilizovanje dugmadi */
+button {
+    background-color: #ff3b30; /* Crvena boja dugmadi */
+    color: white; /* Bele slova */
+    padding: 10px; /* Unutrašnje margine */
+    border: none; /* Bez ivice */
+    border-radius: 4px; /* Zaobljeni uglovi */
+    cursor: pointer; /* Ruka kao pokazivač */
+}
+
+button:hover {
+    background-color: #d52e2e; /* Tamnija crvena na hover */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="bojana logo.png" alt="Logo" class="logo-img">
+            </a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Pretraži proizvode...">
+            <button>Pretraži</button>
+        </div>
+    </header>
+    
+    <main>
+        <h1>Dodaj novi proizvod</h1>
+        <form id="product-form">
+            <div class="form-group">
+                <label for="name">Naziv:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="code">Šifra:</label>
+                <input type="text" id="code" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Cena:</label>
+                <input type="number" id="price" required>
+            </div>
+            <div class="form-group">
+                <label for="dimensions">Dimenzija:</label>
+                <input type="text" id="dimensions" placeholder="npr. 20x30cm">
+                <button type="button" id="add-dimension">Dodaj dimenziju</button>
+            </div>
+            <div id="dimensions-list"></div>
+            <div class="form-group">
+                <label for="description">Opis:</label>
+                <textarea id="description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="image">Slika:</label>
+                <input type="file" id="image" accept="image/*" required>
+            </div>
+            <button type="submit">Dodaj proizvod</button>
+        </form>
+    </main>
+<!-- Popup za izmenu proizvoda -->
+<div id="edit-product-popup" class="popup">
+    <div class="popup-content">
+        <span class="close" id="close-popup">&times;</span>
+        <h2>Izmeni Proizvod</h2>
+        <form id="edit-product-form">
+            <label for="edit-name">Naziv:</label>
+            <input type="text" id="edit-name" required>
+            <label for="edit-code">Sifra:</label>
+            <input type="text" id="edit-code" required>
+            <label for="edit-price">Cena:</label>
+            <input type="number" id="edit-price" required>
+            <label for="edit-description">Opis:</label>
+            <textarea id="edit-description" required></textarea>
+            <label for="edit-dimensions">Dimenzije:</label>
+            <input type="text" id="edit-dimensions">
+            <div id="edit-dimensions-list"></div>
+            <button type="submit">Sačuvaj izmene</button>
+            <button type="button" id="close-edit-popup">Zatvori</button> <!-- Dodano dugme za zatvaranje -->
+        </form>
+    </div>
+</div>
+    <footer>
+        <p>&copy; 2024 Robna kuća Bojana</p>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>
